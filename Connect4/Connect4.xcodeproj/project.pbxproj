@@ -11,6 +11,7 @@
 		0717A09C2557A7B2006DFF3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717A09B2557A7B2006DFF3B /* ViewController.swift */; };
 		0717A09E2557A7B3006DFF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0717A09D2557A7B3006DFF3B /* Assets.xcassets */; };
 		0717A0A12557A7B3006DFF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0717A09F2557A7B3006DFF3B /* Main.storyboard */; };
+		0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717A0AA2557A8C2006DFF3B /* BoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0717A0A02557A7B3006DFF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0717A0A22557A7B3006DFF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0717A0A32557A7B3006DFF3B /* Connect4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect4.entitlements; sourceTree = "<group>"; };
+		0717A0AA2557A8C2006DFF3B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				0717A0992557A7B2006DFF3B /* AppDelegate.swift */,
+				0717A0AA2557A8C2006DFF3B /* BoardView.swift */,
 				0717A09B2557A7B2006DFF3B /* ViewController.swift */,
 				0717A09D2557A7B3006DFF3B /* Assets.xcassets */,
 				0717A09F2557A7B3006DFF3B /* Main.storyboard */,
@@ -132,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */,
 				0717A09C2557A7B2006DFF3B /* ViewController.swift in Sources */,
 				0717A09A2557A7B2006DFF3B /* AppDelegate.swift in Sources */,
 			);

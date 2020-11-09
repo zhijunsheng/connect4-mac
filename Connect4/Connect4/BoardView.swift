@@ -23,10 +23,10 @@ class BoardView: NSView {
     
     func drawBoard() {
         cellSide = bounds.width / 7
-        let cornorRadius = 0.35 * cellSide
+        let cornerRadius = 0.35 * cellSide
         
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setFill()
-        NSBezierPath(roundedRect: bounds, xRadius: cornorRadius, yRadius: cornorRadius).fill()
+        NSBezierPath(roundedRect: bounds, xRadius: cornerRadius, yRadius: cornerRadius).fill()
         
         for row in 0..<6 {
             for col in 0..<7 {

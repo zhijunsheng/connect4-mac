@@ -707,24 +707,26 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Connect4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="417"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dM6-Ye-Iev" customClass="BoardView" customModule="Connect4" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="440" height="230"/>
+                                <rect key="frame" x="20" y="20" width="440" height="377"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dM6-Ye-Iev" secondAttribute="height" multiplier="7:6" id="uxi-WK-WXF"/>
+                                </constraints>
                             </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="2Of-4i-sLB"/>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Ihc-nD-wfq"/>
-                            <constraint firstAttribute="bottom" secondItem="dM6-Ye-Iev" secondAttribute="bottom" constant="20" symbolic="YES" id="UBl-xE-fcb"/>
                             <constraint firstAttribute="trailing" secondItem="dM6-Ye-Iev" secondAttribute="trailing" constant="20" symbolic="YES" id="e5S-tF-Zon"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="728.5"/>
         </scene>
     </scenes>
 </document>

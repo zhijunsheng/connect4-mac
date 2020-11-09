@@ -8,6 +8,10 @@
 import Cocoa
 
 class BoardView: NSView {
+    let cols: Int = 7
+    let rows: Int = 6
+    
+    
     let boardX: CGFloat = 30
     let boardY: CGFloat = 20
     let cellSide: CGFloat = 70
@@ -17,11 +21,14 @@ class BoardView: NSView {
         super.draw(dirtyRect)
 
         drawBoard()
+        
+        drawGrid()
     }
     
     func drawBoard() {
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setFill()
-        NSBezierPath(roundedRect: bounds, xRadius: 20, yRadius: 20).fill()
+//        NSBezierPath(roundedRect: bounds, xRadius: 20, yRadius: 20).fill()
+        NSBezierPath(rect: bounds).fill()
         
         for row in 0..<6 {
             for col in 0..<7 {
@@ -47,4 +54,24 @@ class BoardView: NSView {
 
     }
     
+    private func drawGrid() {
+        let cellWidth: CGFloat = bounds.width / CGFloat(cols)
+        let cellHeight: CGFloat = bounds.height / CGFloat(rows)
+        
+        let grid = NSBezierPath()
+        
+        for col in 1..<cols {
+            grid.move(to: NSPoint(x: CGFloat(col) * cellWidth, y: 0))
+            grid.line(to: NSPoint(x: CGFloat(col) * cellWidth, y: bounds.height))
+        }
+        
+        for row in 1..<rows {
+            grid.move(to: NSPoint(x: 0, y: CGFloat(row) * cellHeight))
+            grid.line(to: NSPoint(x: bounds.width, y: CGFloat(row) * cellHeight))
+        }
+        
+        
+        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setStroke()
+        grid.stroke()
+    }
 }

@@ -11,24 +11,22 @@ class BoardView: NSView {
     let cols: Int = 7
     let rows: Int = 6
     
-    
-    let boardX: CGFloat = 30
-    let boardY: CGFloat = 20
-    let cellSide: CGFloat = 70
-    let radius: CGFloat = 25
+    var cellSide: CGFloat = -1
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         drawBoard()
         
-        drawGrid()
+//        drawGrid()
     }
     
     func drawBoard() {
+        cellSide = bounds.width / 7
+        let cornorRadius = 0.35 * cellSide
+        
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setFill()
-//        NSBezierPath(roundedRect: bounds, xRadius: 20, yRadius: 20).fill()
-        NSBezierPath(rect: bounds).fill()
+        NSBezierPath(roundedRect: bounds, xRadius: cornorRadius, yRadius: cornorRadius).fill()
         
         for row in 0..<6 {
             for col in 0..<7 {
@@ -38,7 +36,10 @@ class BoardView: NSView {
     }
     
     func drawCircleAt(col: Int, row: Int) {
-        drawCircle(x: boardX + CGFloat(col) * cellSide, y: boardY + CGFloat(row) * cellSide, radius: radius)
+        let radius = 0.35 * cellSide
+        let offsetX = (bounds.width / 7 - 2 * radius) / 2
+        let offsetY = (bounds.height / 6 - 2 * radius) / 2
+        drawCircle(x: CGFloat(col) * cellSide + offsetX, y: CGFloat(row) * cellSide + offsetY, radius: radius)
     }
     
     func drawCircle(x: CGFloat, y: CGFloat, radius: CGFloat) {

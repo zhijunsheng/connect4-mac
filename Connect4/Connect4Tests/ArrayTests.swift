@@ -14,7 +14,7 @@ class ArrayTests: XCTestCase {
         var pieces: [Conn4Piece] = []
         XCTAssertEqual(0, pieces.count)
         
-        pieces.append(Conn4Piece(col: 0, row: 0, isRed: true))
+        pieces.append(Conn4Piece(col: 0, row: 0, player: .red))
         XCTAssertEqual(1, pieces.count)
     }
     

@@ -11,4 +11,7 @@ struct Conn4Piece {
     let col: Int
     let row: Int
     let player: Conn4Player
+    
+    // let isRed: Bool
+    
 }

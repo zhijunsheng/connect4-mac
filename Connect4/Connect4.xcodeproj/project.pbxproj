@@ -16,6 +16,7 @@
 		07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5173255A453B00C6D8AC /* Conn4Piece.swift */; };
 		07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5179255A4DF700C6D8AC /* Conn4Player.swift */; };
 		07AA5180255A4F4C00C6D8AC /* Conn4Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */; };
+		07AA5186255AFC9600C6D8AC /* FunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5185255AFC9600C6D8AC /* FunctionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		07AA5173255A453B00C6D8AC /* Conn4Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Piece.swift; sourceTree = "<group>"; };
 		07AA5179255A4DF700C6D8AC /* Conn4Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Player.swift; sourceTree = "<group>"; };
 		07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Board.swift; sourceTree = "<group>"; };
+		07AA5185255AFC9600C6D8AC /* FunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				07AA516D255A046500C6D8AC /* ArrayTests.swift */,
+				07AA5185255AFC9600C6D8AC /* FunctionTests.swift */,
 				07AA5165255A040700C6D8AC /* Info.plist */,
 			);
 			path = Connect4Tests;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07AA516E255A046500C6D8AC /* ArrayTests.swift in Sources */,
+				07AA5186255AFC9600C6D8AC /* FunctionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

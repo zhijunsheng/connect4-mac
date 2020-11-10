@@ -6,8 +6,31 @@
 //
 
 import XCTest
+@testable import Connect4
 
 class ArrayTests: XCTestCase {
+    
+    func testConn4PieceArray() {
+        var pieces: [Conn4Piece] = []
+        XCTAssertEqual(0, pieces.count)
+        
+        pieces.append(Conn4Piece(col: 0, row: 0, isRed: true))
+        XCTAssertEqual(1, pieces.count)
+    }
+    
+    func testStringArray() {
+        var names: [String] = []
+        names.append("Donald Trump")
+        names.append("Golden Thumb")
+        
+        for i in 0..<names.count {
+            print(names[i])
+        }
+        
+        for name in names {
+            print(name)
+        }
+    }
 
     func testIntArray() {
         var intArr: [Int] = [2, 3, 5, 7, 11]

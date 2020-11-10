@@ -12,13 +12,24 @@ class BoardView: NSView {
     let rows: Int = 6
     
     var cellSide: CGFloat = -1
+    
+    var shadowPiecesBox: [Conn4Piece] = [
+        Conn4Piece(col: 0, row: 0, isRed: true),
+        Conn4Piece(col: 1, row: 0, isRed: false),
+        Conn4Piece(col: 0, row: 1, isRed: false),
+    ]
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         drawBoard()
-        
-//        drawGrid()
+        drawPieces()
+    }
+    
+    func drawPieces() {
+        for piece in shadowPiecesBox {
+            drawCircleAt(col: piece.col, row: piece.row, fillingColor: piece.isRed ? .red : .yellow)
+        }
     }
     
     func drawBoard() {
@@ -30,25 +41,25 @@ class BoardView: NSView {
         
         for row in 0..<6 {
             for col in 0..<7 {
-                drawCircleAt(col: col, row: row)
+                drawCircleAt(col: col, row: row, fillingColor: NSColor.white)
             }
         }
     }
     
-    func drawCircleAt(col: Int, row: Int) {
+    func drawCircleAt(col: Int, row: Int, fillingColor: NSColor) {
         let radius = 0.35 * cellSide
         let offsetX = (bounds.width / 7 - 2 * radius) / 2
         let offsetY = (bounds.height / 6 - 2 * radius) / 2
-        drawCircle(x: CGFloat(col) * cellSide + offsetX, y: CGFloat(row) * cellSide + offsetY, radius: radius)
+        drawCircle(x: CGFloat(col) * cellSide + offsetX, y: CGFloat(row) * cellSide + offsetY, radius: radius, fillingColor: fillingColor)
     }
     
-    func drawCircle(x: CGFloat, y: CGFloat, radius: CGFloat) {
+    func drawCircle(x: CGFloat, y: CGFloat, radius: CGFloat, fillingColor: NSColor) {
         let circleRect = NSRect(x: x, y: y, width: 2 * radius, height: 2 * radius)
 //        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setStroke()
 //        NSBezierPath(rect: circleRect).stroke()
         
         let path = NSBezierPath(ovalIn: circleRect)
-        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        fillingColor.setFill()
         path.fill()
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         path.stroke()

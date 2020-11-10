@@ -1,25 +1,9 @@
 import Cocoa
 
-var str = "Hello, playground"
-str = "Hello, friends"
+let intArr: [Int] = [2, 3, 5, 7]
 
-// concept 1
-print("Hello, 1")
-print("Hello, 2")
-print("Hello, 3")
-
-// concept 2
-let x = 50
-
-if x % 2 == 0 {
-    print("x is even")
-} else {
-    print("x is odd")
-}
-
-// concept 3
-
-for i in 0...30 {
-    print(i)
-}
+print(intArr[0])
+print(intArr[1])
+print(intArr[2])
+print(intArr[3])
 

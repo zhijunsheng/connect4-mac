@@ -13,11 +13,7 @@ class BoardView: NSView {
     
     var cellSide: CGFloat = -1
     
-    var shadowPiecesBox: [Conn4Piece] = [
-        Conn4Piece(col: 0, row: 0, isRed: true),
-        Conn4Piece(col: 1, row: 0, isRed: false),
-        Conn4Piece(col: 0, row: 1, isRed: false),
-    ]
+    var shadowPiecesBox: [Conn4Piece] = []
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -28,7 +24,9 @@ class BoardView: NSView {
     
     func drawPieces() {
         for piece in shadowPiecesBox {
-            drawCircleAt(col: piece.col, row: piece.row, fillingColor: piece.isRed ? .red : .yellow)
+            let fillingColor: NSColor = (piece.player == Conn4Player.red) ? NSColor.red : NSColor.yellow
+            
+            drawCircleAt(col: piece.col, row: piece.row, fillingColor: fillingColor)
         }
     }
     

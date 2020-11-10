@@ -723,6 +723,9 @@
                             <constraint firstAttribute="trailing" secondItem="dM6-Ye-Iev" secondAttribute="trailing" constant="20" symbolic="YES" id="e5S-tF-Zon"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="dM6-Ye-Iev" id="4z8-aK-Sbb"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,5 @@ import Foundation
 struct Conn4Piece {
     let col: Int
     let row: Int
-    let isRed: Bool
+    let player: Conn4Player
 }

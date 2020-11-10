@@ -14,6 +14,8 @@
 		0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717A0AA2557A8C2006DFF3B /* BoardView.swift */; };
 		07AA516E255A046500C6D8AC /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA516D255A046500C6D8AC /* ArrayTests.swift */; };
 		07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5173255A453B00C6D8AC /* Conn4Piece.swift */; };
+		07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5179255A4DF700C6D8AC /* Conn4Player.swift */; };
+		07AA5180255A4F4C00C6D8AC /* Conn4Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		07AA5165255A040700C6D8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07AA516D255A046500C6D8AC /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		07AA5173255A453B00C6D8AC /* Conn4Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Piece.swift; sourceTree = "<group>"; };
+		07AA5179255A4DF700C6D8AC /* Conn4Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Player.swift; sourceTree = "<group>"; };
+		07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,9 @@
 		0717A0982557A7B2006DFF3B /* Connect4 */ = {
 			isa = PBXGroup;
 			children = (
+				07AA5179255A4DF700C6D8AC /* Conn4Player.swift */,
 				07AA5173255A453B00C6D8AC /* Conn4Piece.swift */,
+				07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */,
 				0717A0992557A7B2006DFF3B /* AppDelegate.swift */,
 				0717A0AA2557A8C2006DFF3B /* BoardView.swift */,
 				0717A09B2557A7B2006DFF3B /* ViewController.swift */,
@@ -201,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */,
+				07AA5180255A4F4C00C6D8AC /* Conn4Board.swift in Sources */,
+				07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */,
 				0717A09C2557A7B2006DFF3B /* ViewController.swift in Sources */,
 				0717A09A2557A7B2006DFF3B /* AppDelegate.swift in Sources */,
 				07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */,

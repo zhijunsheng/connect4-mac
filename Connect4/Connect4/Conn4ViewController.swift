@@ -16,6 +16,8 @@ class Conn4ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Host.current().name)
 
         conn4Board.dropPieceAt(col: 2)
         boardView.shadowPiecesBox = conn4Board.piecesBox

@@ -27,6 +27,10 @@ class Conn4ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    @IBAction func advertise(_ sender: NSButton) {
+        print("button clicked")
+    }
 }
 
 extension Conn4ViewController: MCBrowserViewControllerDelegate {

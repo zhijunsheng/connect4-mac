@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -706,20 +707,32 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="Conn4ViewController" customModule="Connect4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="417"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="518"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dM6-Ye-Iev" customClass="BoardView" customModule="Connect4" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="440" height="377"/>
+                                <rect key="frame" x="20" y="121" width="440" height="377"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dM6-Ye-Iev" secondAttribute="height" multiplier="7:6" id="uxi-WK-WXF"/>
                                 </constraints>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="loM-WY-iwA">
+                                <rect key="frame" x="13" y="74" width="96" height="32"/>
+                                <buttonCell key="cell" type="push" title="Advertise" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sCG-cS-qbs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="14"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advertise:" target="XfG-lQ-9wD" id="zD5-U3-5VY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="loM-WY-iwA" firstAttribute="top" secondItem="dM6-Ye-Iev" secondAttribute="bottom" constant="20" symbolic="YES" id="1qz-yY-cQN"/>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="2Of-4i-sLB"/>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Ihc-nD-wfq"/>
                             <constraint firstAttribute="trailing" secondItem="dM6-Ye-Iev" secondAttribute="trailing" constant="20" symbolic="YES" id="e5S-tF-Zon"/>
+                            <constraint firstItem="loM-WY-iwA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="fXt-yV-l7z"/>
                         </constraints>
                     </view>
                     <connections>
@@ -728,7 +741,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="728.5"/>
+            <point key="canvasLocation" x="75" y="779"/>
         </scene>
     </scenes>
 </document>

@@ -12,12 +12,15 @@ class Conn4ViewController: NSViewController {
 
     var conn4Board = Conn4Board()
     
+    var peerID: MCPeerID!
+    var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
+    
     @IBOutlet weak var boardView: BoardView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Host.current().name)
+        peerID = MCPeerID(displayName: Host.current().name ?? "Golden Thumb's mbp2020")
 
         conn4Board.dropPieceAt(col: 2)
         boardView.shadowPiecesBox = conn4Board.piecesBox
@@ -32,6 +35,9 @@ class Conn4ViewController: NSViewController {
     
     @IBAction func advertise(_ sender: NSButton) {
         print("button clicked")
+        nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "gt-conn4")
+        nearbyServiceAdvertiser.delegate = self
+        nearbyServiceAdvertiser.startAdvertisingPeer()
     }
 }
 

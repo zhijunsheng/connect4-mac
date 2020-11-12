@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class Conn4ViewController: NSViewController {
 
     var conn4Board = Conn4Board()
     

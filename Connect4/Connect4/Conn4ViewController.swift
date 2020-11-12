@@ -13,6 +13,7 @@ class Conn4ViewController: NSViewController {
     var conn4Board = Conn4Board()
     
     var peerID: MCPeerID!
+    var session: MCSession!
     var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
     
     @IBOutlet weak var boardView: BoardView!
@@ -21,6 +22,7 @@ class Conn4ViewController: NSViewController {
         super.viewDidLoad()
         
         peerID = MCPeerID(displayName: Host.current().name ?? "Golden Thumb's mbp2020")
+        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
 
         conn4Board.dropPieceAt(col: 2)
         boardView.shadowPiecesBox = conn4Board.piecesBox
@@ -53,7 +55,7 @@ extension Conn4ViewController: MCBrowserViewControllerDelegate {
 
 extension Conn4ViewController: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        
+        invitationHandler(true, session)
     }
 }
 

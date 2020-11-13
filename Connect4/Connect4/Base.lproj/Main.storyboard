@@ -726,13 +726,25 @@
                                     <action selector="advertise:" target="XfG-lQ-9wD" id="zD5-U3-5VY"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-vZ-mdk">
+                                <rect key="frame" x="397" y="74" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Invite" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MZr-EU-cs6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="14"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="invite:" target="XfG-lQ-9wD" id="rbe-n7-Jgf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="loM-WY-iwA" firstAttribute="top" secondItem="dM6-Ye-Iev" secondAttribute="bottom" constant="20" symbolic="YES" id="1qz-yY-cQN"/>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="2Of-4i-sLB"/>
                             <constraint firstItem="dM6-Ye-Iev" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Ihc-nD-wfq"/>
+                            <constraint firstItem="SNW-vZ-mdk" firstAttribute="top" secondItem="dM6-Ye-Iev" secondAttribute="bottom" constant="20" symbolic="YES" id="MR3-gQ-jMZ"/>
                             <constraint firstAttribute="trailing" secondItem="dM6-Ye-Iev" secondAttribute="trailing" constant="20" symbolic="YES" id="e5S-tF-Zon"/>
                             <constraint firstItem="loM-WY-iwA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="fXt-yV-l7z"/>
+                            <constraint firstAttribute="trailing" secondItem="SNW-vZ-mdk" secondAttribute="trailing" constant="20" symbolic="YES" id="lfu-v2-snf"/>
                         </constraints>
                     </view>
                     <connections>

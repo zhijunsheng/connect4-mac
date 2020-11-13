@@ -36,20 +36,26 @@ class Conn4ViewController: NSViewController {
     }
     
     @IBAction func advertise(_ sender: NSButton) {
-        print("button clicked")
         nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "gt-conn4")
         nearbyServiceAdvertiser.delegate = self
         nearbyServiceAdvertiser.startAdvertisingPeer()
     }
+    
+    @IBAction func invite(_ sender: NSButton) {
+        let browser = MCBrowserViewController(serviceType: "gt-conn4", session: session)
+        browser.delegate = self
+        presentAsSheet(browser)
+    }
+    
 }
 
 extension Conn4ViewController: MCBrowserViewControllerDelegate {
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
-        
+        dismiss(browserViewController)
     }
     
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
-        
+        dismiss(browserViewController)
     }
 }
 

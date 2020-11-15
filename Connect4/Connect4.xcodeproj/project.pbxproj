@@ -12,6 +12,7 @@
 		0717A09E2557A7B3006DFF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0717A09D2557A7B3006DFF3B /* Assets.xcassets */; };
 		0717A0A12557A7B3006DFF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0717A09F2557A7B3006DFF3B /* Main.storyboard */; };
 		0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717A0AA2557A8C2006DFF3B /* BoardView.swift */; };
+		07988E722561F4660082B1D4 /* Conn4BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E712561F4660082B1D4 /* Conn4BoardTests.swift */; };
 		07AA516E255A046500C6D8AC /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA516D255A046500C6D8AC /* ArrayTests.swift */; };
 		07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5173255A453B00C6D8AC /* Conn4Piece.swift */; };
 		07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5179255A4DF700C6D8AC /* Conn4Player.swift */; };
@@ -38,6 +39,7 @@
 		0717A0A22557A7B3006DFF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0717A0A32557A7B3006DFF3B /* Connect4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect4.entitlements; sourceTree = "<group>"; };
 		0717A0AA2557A8C2006DFF3B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		07988E712561F4660082B1D4 /* Conn4BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4BoardTests.swift; sourceTree = "<group>"; };
 		07AA5161255A040700C6D8AC /* Connect4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Connect4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AA5165255A040700C6D8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07AA516D255A046500C6D8AC /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				07AA516D255A046500C6D8AC /* ArrayTests.swift */,
 				07AA5185255AFC9600C6D8AC /* FunctionTests.swift */,
 				07AA5165255A040700C6D8AC /* Info.plist */,
+				07988E712561F4660082B1D4 /* Conn4BoardTests.swift */,
 			);
 			path = Connect4Tests;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07988E722561F4660082B1D4 /* Conn4BoardTests.swift in Sources */,
 				07AA516E255A046500C6D8AC /* ArrayTests.swift in Sources */,
 				07AA5186255AFC9600C6D8AC /* FunctionTests.swift in Sources */,
 			);

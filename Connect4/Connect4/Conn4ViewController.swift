@@ -23,6 +23,7 @@ class Conn4ViewController: NSViewController {
         
         peerID = MCPeerID(displayName: Host.current().name ?? "Golden Thumb's mbp2020")
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        session.delegate = self
 
         boardView.conn4Delegate = self
         
@@ -55,6 +56,11 @@ extension Conn4ViewController: Conn4Delegate {
         conn4Board.dropPieceAt(col: col)
         boardView.shadowPiecesBox = conn4Board.piecesBox
         boardView.setNeedsDisplay(boardView.bounds)
+        
+        let colStr: String = "\(col)"
+        if let colData = colStr.data(using: .utf8) {
+            try? session.send(colData, toPeers: session.connectedPeers, with: .reliable)
+        }
     }
 }
 
@@ -80,7 +86,11 @@ extension Conn4ViewController: MCSessionDelegate {
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        
+        if let colStr = String(data: data, encoding: .utf8), let col = Int(colStr) {
+            DispatchQueue.main.async {
+                self.dropPieceAt(col: col)
+            }
+        }
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

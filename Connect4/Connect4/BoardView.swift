@@ -33,7 +33,7 @@ class BoardView: NSView {
     
     func drawPieces() {
         for piece in shadowPiecesBox {
-            let fillingColor: NSColor = (piece.player == Conn4Player.red) ? NSColor.red : NSColor.yellow
+            let fillingColor: NSColor = (piece.player == Conn4Player.red) ? NSColor.red : #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             
             drawCircleAt(col: piece.col, row: piece.row, fillingColor: fillingColor)
         }

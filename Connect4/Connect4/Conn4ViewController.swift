@@ -24,11 +24,7 @@ class Conn4ViewController: NSViewController {
         peerID = MCPeerID(displayName: Host.current().name ?? "Golden Thumb's mbp2020")
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
 
-        conn4Board.dropPieceAt(col: 0)
-        conn4Board.dropPieceAt(col: 2)
-        conn4Board.dropPieceAt(col: 6)
-        conn4Board.dropPieceAt(col: 6)
-        conn4Board.dropPieceAt(col: 6)
+        boardView.conn4Delegate = self
         
         boardView.shadowPiecesBox = conn4Board.piecesBox
         boardView.setNeedsDisplay(boardView.bounds)
@@ -52,6 +48,14 @@ class Conn4ViewController: NSViewController {
         presentAsSheet(browser)
     }
     
+}
+
+extension Conn4ViewController: Conn4Delegate {
+    func dropPieceAt(col: Int) {
+        conn4Board.dropPieceAt(col: col)
+        boardView.shadowPiecesBox = conn4Board.piecesBox
+        boardView.setNeedsDisplay(boardView.bounds)
+    }
 }
 
 extension Conn4ViewController: MCBrowserViewControllerDelegate {

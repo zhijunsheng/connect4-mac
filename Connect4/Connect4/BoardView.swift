@@ -14,12 +14,21 @@ class BoardView: NSView {
     var cellSide: CGFloat = -1
     
     var shadowPiecesBox: [Conn4Piece] = []
+    var conn4Delegate: Conn4Delegate?
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
+        cellSide = bounds.width / 7
+        
         drawBoard()
         drawPieces()
+    }
+    
+    override func mouseUp(with event: NSEvent) {
+        let loc = convert(event.locationInWindow, from: nil)
+        let col: Int = Int(loc.x / cellSide)
+        conn4Delegate?.dropPieceAt(col: col)
     }
     
     func drawPieces() {
@@ -31,7 +40,6 @@ class BoardView: NSView {
     }
     
     func drawBoard() {
-        cellSide = bounds.width / 7
         let cornerRadius = 0.35 * cellSide
         
         #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).setFill()

@@ -13,6 +13,7 @@
 		0717A0A12557A7B3006DFF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0717A09F2557A7B3006DFF3B /* Main.storyboard */; };
 		0717A0AB2557A8C2006DFF3B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717A0AA2557A8C2006DFF3B /* BoardView.swift */; };
 		07988E722561F4660082B1D4 /* Conn4BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E712561F4660082B1D4 /* Conn4BoardTests.swift */; };
+		07988E7A256225B10082B1D4 /* Conn4Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07988E79256225B10082B1D4 /* Conn4Delegate.swift */; };
 		07AA516E255A046500C6D8AC /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA516D255A046500C6D8AC /* ArrayTests.swift */; };
 		07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5173255A453B00C6D8AC /* Conn4Piece.swift */; };
 		07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA5179255A4DF700C6D8AC /* Conn4Player.swift */; };
@@ -40,6 +41,7 @@
 		0717A0A32557A7B3006DFF3B /* Connect4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect4.entitlements; sourceTree = "<group>"; };
 		0717A0AA2557A8C2006DFF3B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		07988E712561F4660082B1D4 /* Conn4BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4BoardTests.swift; sourceTree = "<group>"; };
+		07988E79256225B10082B1D4 /* Conn4Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conn4Delegate.swift; sourceTree = "<group>"; };
 		07AA5161255A040700C6D8AC /* Connect4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Connect4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AA5165255A040700C6D8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07AA516D255A046500C6D8AC /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		0717A0982557A7B2006DFF3B /* Connect4 */ = {
 			isa = PBXGroup;
 			children = (
+				07988E79256225B10082B1D4 /* Conn4Delegate.swift */,
 				07AA5179255A4DF700C6D8AC /* Conn4Player.swift */,
 				07AA5173255A453B00C6D8AC /* Conn4Piece.swift */,
 				07AA517F255A4F4C00C6D8AC /* Conn4Board.swift */,
@@ -216,6 +219,7 @@
 				07AA5180255A4F4C00C6D8AC /* Conn4Board.swift in Sources */,
 				07AA517A255A4DF700C6D8AC /* Conn4Player.swift in Sources */,
 				0717A09C2557A7B2006DFF3B /* Conn4ViewController.swift in Sources */,
+				07988E7A256225B10082B1D4 /* Conn4Delegate.swift in Sources */,
 				0717A09A2557A7B2006DFF3B /* AppDelegate.swift in Sources */,
 				07AA5174255A453B00C6D8AC /* Conn4Piece.swift in Sources */,
 			);

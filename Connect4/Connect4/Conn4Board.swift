@@ -8,28 +8,33 @@
 import Foundation
 
 struct Conn4Board: CustomStringConvertible {
-    var piecesBox: [Conn4Piece] = []
+    private(set) var piecesBox: [Conn4Piece] = []
     
     mutating func dropPieceAt(col: Int) {
-        piecesBox.append(Conn4Piece(col: col, row: 0, player: Conn4Player.red))
+        piecesBox.append(Conn4Piece(col: col, row: 0, player: Conn4Player.yellow))
+    }
+    
+    private func pieceAt(col: Int, row: Int) -> Conn4Piece? {
+        for piece in piecesBox {
+            if piece.col == col && piece.row == row {
+                return piece
+            }
+        }
+        return nil
     }
     
     var description: String {
         var desc: String = ""
         
-        /*
-         
-         i => 5 - i
-         0 => 5
-         1 => 4
-         ...
-         5 => 0
-         
-         */
         for i in 0..<6 {
             desc += "\(5 - i)"
-            for _ in 0..<7 {
-                desc += " ."
+            for col in 0..<7 {
+                // if red " r", otherwise yellow " y"
+                if let piece = pieceAt(col: col, row: 5 - i) {
+                    desc += piece.player == .red ? " r" : " y"
+                } else {
+                    desc += " ."
+                }
             }
             desc += "\n"
         }

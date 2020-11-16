@@ -9,12 +9,15 @@ import Foundation
 
 struct Conn4Board: CustomStringConvertible {
     private(set) var piecesBox: [Conn4Piece] = []
+    private var playerInTurn: Conn4Player = .red
     
     mutating func dropPieceAt(col: Int) {
-        piecesBox.append(Conn4Piece(col: col, row: 0, player: Conn4Player.yellow))
+        piecesBox.append(Conn4Piece(col: col, row: 0, player: playerInTurn))
+        
+        playerInTurn = playerInTurn == .red ? .yellow : .red
     }
     
-    private func pieceAt(col: Int, row: Int) -> Conn4Piece? {
+    func pieceAt(col: Int, row: Int) -> Conn4Piece? {
         for piece in piecesBox {
             if piece.col == col && piece.row == row {
                 return piece

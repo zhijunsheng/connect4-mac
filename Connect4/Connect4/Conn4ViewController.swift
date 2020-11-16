@@ -49,13 +49,16 @@ class Conn4ViewController: NSViewController {
         presentAsSheet(browser)
     }
     
+    func makeMoveAt(col: Int) {
+        conn4Board.dropPieceAt(col: col)
+        boardView.shadowPiecesBox = conn4Board.piecesBox
+        boardView.setNeedsDisplay(boardView.bounds)
+    }
 }
 
 extension Conn4ViewController: Conn4Delegate {
     func dropPieceAt(col: Int) {
-        conn4Board.dropPieceAt(col: col)
-        boardView.shadowPiecesBox = conn4Board.piecesBox
-        boardView.setNeedsDisplay(boardView.bounds)
+        makeMoveAt(col: col)
         
         let colStr: String = "\(col)"
         if let colData = colStr.data(using: .utf8) {
@@ -88,7 +91,7 @@ extension Conn4ViewController: MCSessionDelegate {
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         if let colStr = String(data: data, encoding: .utf8), let col = Int(colStr) {
             DispatchQueue.main.async {
-                self.dropPieceAt(col: col)
+                self.makeMoveAt(col: col)
             }
         }
     }

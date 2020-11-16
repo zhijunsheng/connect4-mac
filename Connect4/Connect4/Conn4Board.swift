@@ -17,12 +17,24 @@ struct Conn4Board: CustomStringConvertible {
     var description: String {
         var desc: String = ""
         
-        for _ in 0..<6 {
+        /*
+         
+         i => 5 - i
+         0 => 5
+         1 => 4
+         ...
+         5 => 0
+         
+         */
+        for i in 0..<6 {
+            desc += "\(5 - i)"
             for _ in 0..<7 {
                 desc += " ."
             }
             desc += "\n"
-        }        
+        }
+        
+        desc += "  0 1 2 3 4 5 6"
         
         return desc
     }

@@ -105,10 +105,10 @@
 		07AA5162255A040700C6D8AC /* Connect4Tests */ = {
 			isa = PBXGroup;
 			children = (
+				07988E712561F4660082B1D4 /* Conn4BoardTests.swift */,
 				07AA516D255A046500C6D8AC /* ArrayTests.swift */,
 				07AA5185255AFC9600C6D8AC /* FunctionTests.swift */,
 				07AA5165255A040700C6D8AC /* Info.plist */,
-				07988E712561F4660082B1D4 /* Conn4BoardTests.swift */,
 			);
 			path = Connect4Tests;
 			sourceTree = "<group>";

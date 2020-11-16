@@ -24,7 +24,12 @@ class Conn4ViewController: NSViewController {
         peerID = MCPeerID(displayName: Host.current().name ?? "Golden Thumb's mbp2020")
         session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
 
+        conn4Board.dropPieceAt(col: 0)
         conn4Board.dropPieceAt(col: 2)
+        conn4Board.dropPieceAt(col: 6)
+        conn4Board.dropPieceAt(col: 6)
+        conn4Board.dropPieceAt(col: 6)
+        
         boardView.shadowPiecesBox = conn4Board.piecesBox
         boardView.setNeedsDisplay(boardView.bounds)
     }

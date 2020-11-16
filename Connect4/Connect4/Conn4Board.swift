@@ -12,9 +12,18 @@ struct Conn4Board: CustomStringConvertible {
     private var playerInTurn: Conn4Player = .red
     
     mutating func dropPieceAt(col: Int) {
-        piecesBox.append(Conn4Piece(col: col, row: 0, player: playerInTurn))
-        
+        piecesBox.append(Conn4Piece(col: col, row: numberOfPiecesAt(col: col), player: playerInTurn))
         playerInTurn = playerInTurn == .red ? .yellow : .red
+    }
+    
+    private func numberOfPiecesAt(col: Int) -> Int {
+        var count: Int = 0
+        for piece in piecesBox {
+            if piece.col == col {
+                count += 1
+            }
+        }
+        return count
     }
     
     func pieceAt(col: Int, row: Int) -> Conn4Piece? {
